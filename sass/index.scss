@@ -1,0 +1,103 @@
+@import 'variables';
+
+html *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    background:  url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100%;
+}
+
+body{
+    box-shadow:inset 0 0 0 2000px hsla(257, 40%, 49%, 1);
+    height: 100vh;
+}
+
+header{
+    padding-top: 2rem;
+    padding-left: 2rem;
+    margin-bottom: 3.5rem;
+
+    .logo{
+        width: 130px;
+    }
+}
+
+main{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    .mockup{
+        max-width: 300px;
+        margin-bottom: 3.8rem;
+    }
+
+    h1{
+        color: $text;
+        font-family: $headingFont;
+        font-size: 24px;
+        margin-bottom: 1.2rem;
+        padding: 0 40px;
+    }
+
+    p{
+        color: $text;
+        font-family: $bodyFont;
+        line-height:  1.45rem;
+        margin-bottom: 1.5rem;
+        padding: 0 35px;
+    }
+
+    button{
+        background-color: $text;
+        color: $btnColor;
+        border: none;
+        border-radius: 20px;
+        font-family: $headingFont;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 11px 75px;
+    }
+}
+
+.social-div{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4rem;
+    width: 109px;
+
+    .social{
+        border: 1px solid $text;
+        border-radius: 50%;
+        color: $text;
+        height: 28px;
+        position: relative;
+        width: 28px;
+
+        .icon{
+            position:absolute;
+            top: 25%;
+        }
+        
+        .twitter{
+            right: 30%;
+        }
+
+        .face{
+            left: 34%;
+        }
+
+        .insta{
+            left: 28%;
+        }
+    }
+}
