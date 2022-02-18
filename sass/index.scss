@@ -11,11 +11,18 @@ html *{
     background-repeat: no-repeat;
     background-position: top;
     height: 100%;
+
+    @media screen and (min-width: 1200px) {
+        background: url(../images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
 }
 
 body{
     box-shadow:inset 0 0 0 2000px hsla(257, 40%, 49%, 1);
     height: 100vh;
+
 }
 
 header{
@@ -23,8 +30,19 @@ header{
     padding-left: 2rem;
     margin-bottom: 3.5rem;
 
+    @media screen and (min-width: 1440px) {
+        padding-left: 4rem;
+        padding-top: 3.2rem;
+    }
+
     .logo{
         width: 130px;
+
+        @media screen and (min-width: 1440px) {
+            padding-left: 0rem;
+            padding-top: 0rem;
+            width: 220px;
+        }
     }
 }
 
@@ -34,18 +52,49 @@ main{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    position: relative;
+
+    @media screen and (min-width: 1440px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
     .mockup{
         max-width: 300px;
         margin-bottom: 3.8rem;
+
+        @media screen and (min-width: 1440px) {
+            max-width: 800px;
+            left: 74px;
+            top: 25px;
+            position: absolute;
+        }
+    }
+
+   
+}
+
+.info{
+
+    @media screen and (min-width: 1440px) {
+        margin-left: 730px;
+        margin-top: 70px;
     }
 
     h1{
         color: $text;
         font-family: $headingFont;
         font-size: 24px;
-        margin-bottom: 1.2rem;
-        padding: 0 40px;
+        margin-bottom: 1.1rem;
+        padding: 0 25px;
+        width: 340px;
+
+        @media screen and (min-width: 1439px) {
+            margin-right: 18px;
+            font-size: 40px;
+            text-align: start;
+            width: 500px;
+        }
     }
 
     p{
@@ -53,7 +102,16 @@ main{
         font-family: $bodyFont;
         line-height:  1.45rem;
         margin-bottom: 1.5rem;
-        padding: 0 35px;
+        padding: 0 20px;
+        width: 340px;
+
+        @media screen and (min-width: 1439px) {
+            font-size: 18px;
+            line-height: 1.7rem;
+            margin-left: 10px;
+            text-align: start;
+            width: 550px;
+        }
     }
 
     button{
@@ -65,39 +123,80 @@ main{
         font-size: 12px;
         font-weight: 400;
         padding: 11px 75px;
+
+        @media screen and (min-width: 1440px) {
+            border-radius: 40px;
+            margin-right: 300px;
+            font-size: 17px;
+            padding: 15px 68px;
+        }
     }
-}
 
-.social-div{
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 4rem;
-    width: 109px;
-
-    .social{
-        border: 1px solid $text;
-        border-radius: 50%;
+    button:hover{
+        background-color: $btnHover;
         color: $text;
-        height: 28px;
-        position: relative;
-        width: 28px;
+        cursor: pointer;
+    }
 
-        .icon{
-            position:absolute;
-            top: 25%;
+    .social-div{
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        margin-top: 4rem;
+        width: 110px;
+
+        @media screen and (min-width: 1440px) {
+            position: absolute;
+            justify-content: space-between;
+            margin-left: 404px;
+            margin-top: 185px;
+            width: 148px;
         }
-        
-        .twitter{
-            right: 30%;
+    
+        .social{
+            border: 1px solid $text;
+            border-radius: 50%;
+            color: $text;
+            height: 28px;
+            position: relative;
+            width: 28px;
+
+            @media screen and (min-width: 1440px) {
+                height: 38px;
+                width: 38px;
+            }
+    
+            .icon{
+                position:absolute;
+                top: 25%;
+
+                @media screen and (min-width: 1440px) {
+                    font-size: 16px;
+                }
+            }
+            
+            .twitter{
+                right: 30%;
+            }
+    
+            .face{
+                left: 34%;
+            }
+    
+            .insta{
+                left: 28%;
+
+                @media screen and (min-width: 1440px) {
+                    font-size: 20px;
+                }
+            }
         }
 
-        .face{
-            left: 34%;
-        }
-
-        .insta{
-            left: 28%;
+        .social:hover{
+            border: 1px solid $btnHover;
+            color: $btnHover;
+            cursor: pointer;
         }
     }
 }
